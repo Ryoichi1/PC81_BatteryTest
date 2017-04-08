@@ -153,7 +153,7 @@
             <Slider Height="19" Canvas.Left="354" Canvas.Top="160" Width="201" Background="#FF35383A" Maximum="3.1" SmallChange="0.01" TickPlacement="Both" Value="{Binding VolSpec}" Style="{DynamicResource FlatSlider}" BorderBrush="#FFF70BA1" Foreground="#CCD054EC" Minimum="3" TickFrequency="0.01"/>
         </Canvas>
         <Label Height="201" Canvas.Left="622" Content="{Binding VolData}" Canvas.Top="81" Width="588" Foreground="{Binding ColorVol}" FontSize="140" FontFamily="Segoe UI Light" BorderBrush="#FF0CC9F3" BorderThickness="1"/>
-        <Label x:Name="label判定" Content="{Binding Decision}" Height="363" Canvas.Left="257" Canvas.Top="316" Width="678" FontSize="240" FontFamily="Segoe WP SemiLight" FontStyle="Italic" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" Opacity="0" Foreground="{Binding Color判定}">
+        <Label x:Name="label判定" Content="{Binding Decision}" Height="363" Canvas.Left="257" Canvas.Top="316" Width="678" FontSize="240" FontFamily="Meiryo UI" FontStyle="Italic" RenderTransformOrigin="0.5,0.5" Opacity="0" Foreground="{Binding Color判定}">
             <Label.Effect>
                 <DropShadowEffect Color="#FF58B0E2" Direction="0" BlurRadius="40" ShadowDepth="0"/>
             </Label.Effect>
