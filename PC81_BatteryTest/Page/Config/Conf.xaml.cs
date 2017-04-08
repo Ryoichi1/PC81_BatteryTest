@@ -33,6 +33,7 @@ namespace PC81_BatteryTest
 
             TabMenu.SelectedIndex = 0;
 
+
             // オブジェクト作成に必要なコードをこの下に挿入します。
         }
 
