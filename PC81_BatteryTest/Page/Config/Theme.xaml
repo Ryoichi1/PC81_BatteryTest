@@ -30,6 +30,12 @@
         			UriSource="/Resources/19207e.jpg"/>
             </Image.Source>
         </Image>
+        <Image x:Name="Pic5" Canvas.Left="702" Canvas.Top="36" Width="128" Cursor="Hand" PreviewMouseLeftButtonDown="Pic5_PreviewMouseLeftButtonDown">
+            <Image.Source>
+                <BitmapImage DecodePixelWidth="128"
+                    UriSource="/Resources/19192_en_1.jpg"/>
+            </Image.Source>
+        </Image>
 
     </Canvas>
 

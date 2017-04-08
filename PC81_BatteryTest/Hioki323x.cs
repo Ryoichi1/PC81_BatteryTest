@@ -88,7 +88,8 @@ namespace PC81_BatteryTest
         {
             try
             {
-
+                SendCommand(":INIT:CONT 1");//これないと3238次回立ち上げ時に制御できなくなる（工場出荷設定が必要になる）
+                Thread.Sleep(300);
                 if (Port.IsOpen) Port.Close();
 
                 return true;

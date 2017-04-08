@@ -103,7 +103,14 @@ namespace PC81_BatteryTest
                         {
                             State.VmTestStatus.Message = "音声認識中です・・・・";
                             CheckVol();
-                            break;
+                            if (Flags.Testing)
+                            {
+                                break;
+                            }
+                            else
+                            {
+                                continue;
+                            }
                         }
                     }
 
@@ -149,6 +156,7 @@ namespace PC81_BatteryTest
         private void buttonOpeCodeClear_Click(object sender, RoutedEventArgs e)
         {
             Flags.FlagStop音声認識 = true;
+            Flags.Testing = false;
 
             tbOpecode.Foreground = Brushes.Gray;
             State.VmTestStatus.SetOpecode = false;
@@ -160,6 +168,7 @@ namespace PC81_BatteryTest
             if (State.VmTestStatus.SetKeyWord)
             {
                 Flags.FlagStop音声認識 = true;
+                Flags.Testing = false;
                 State.VmTestStatus.SetKeyWord = false;
                 buttonKeyWordClear.Content = "登録";
                 tbKeyWord.IsReadOnly = false;
@@ -204,8 +213,13 @@ namespace PC81_BatteryTest
         //メインルーチン
         public void CheckVol()
         {
+            Flags.Testing = true;
 
             SpeechRecognition.音声認識();
+
+            //音声認識中にクリアボタンが押された場合の処理
+            if (!Flags.Testing) return;
+
             State.VmTestStatus.Decision = "";
 
             if (SpeechRecognition.一致率 < State.VmTestStatus.VoiceSpec) return;

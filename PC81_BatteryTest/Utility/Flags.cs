@@ -10,13 +10,11 @@ namespace PC81_BatteryTest
     public static class Flags
     {
         public static bool OtherPage { get; set; }
-        public static bool ReturnFromOtherPage { get; set; }
 
         //試験開始時に初期化が必要なフラグ
         public static bool StopInit周辺機器 { get; set; }
         public static bool Initializing周辺機器 { get; set; }
         public static bool Testing { get; set; }
-        public static bool BattleMode { get; set; }
 
 
         public static bool FlagStop音声認識 { get; set; }

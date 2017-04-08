@@ -97,14 +97,7 @@ namespace PC81_BatteryTest
 
         private void MetroWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            if (Flags.Testing)
-            {
-                e.Cancel = true;
-            }
-            else
-            {
-                Flags.StopInit周辺機器 = true;
-            }
+            Flags.StopInit周辺機器 = true;
         }
 
 

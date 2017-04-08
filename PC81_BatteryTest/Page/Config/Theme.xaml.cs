@@ -45,5 +45,10 @@ namespace PC81_BatteryTest
         {
             State.VmMainWindow.Theme = "Resources/19207e.jpg";
         }
+
+        private void Pic5_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            State.VmMainWindow.Theme = "Resources/19192_en_1.jpg";
+        }
     }
 }
